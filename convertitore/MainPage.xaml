@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="convertitore.MainPage">
+
+    <ScrollView>
+
+        <VerticalStackLayout Spacing="50" Padding="30">
+
+            <Label 
+                Text="Sorgente: "
+                FontSize="Medium"
+                HorizontalOptions="Center" />
+
+            <Entry
+                x:Name="valutaSorg"
+                WidthRequest="200"
+                Keyboard="Numeric"
+                TextChanged="valutaSorg_TextChanged"
+                HorizontalOptions="Center" />
+            
+            <Picker 
+                x:Name="pickerSorg"
+                SelectedIndexChanged="pickerSorg_SelectedIndexChanged"
+                HorizontalOptions="Center" />
+
+            <Label 
+                Text="Destinazione: "
+                FontSize="Medium"
+                HorizontalOptions="Center" />
+
+            <Entry
+                x:Name="valutaDest"
+                IsReadOnly="True"
+                WidthRequest="200"
+                HorizontalOptions="Center" />
+
+            <Picker 
+                x:Name="pickerDest"
+                SelectedIndexChanged="pickerDest_SelectedIndexChanged"
+                HorizontalOptions="Center" />
+
+            <Button 
+                Text="Inverti le valute"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked" />
+    
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
